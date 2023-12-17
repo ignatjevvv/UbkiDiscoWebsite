@@ -8,7 +8,7 @@ const lyricsSongs = [
     ['Текст', 'Текст', 'Текст', 'Текст', 'Текст'],
     ['Текст', 'Текст', 'Текст', 'Текст', 'Текст'],
     ['Текст', 'Текст', 'Текст', 'Текст', 'Текст'],
-    ['Текст', 'Текст', 'Текст', 'Текст', 'Текст'],
+    [':)', 'Текст', 'Текст', 'Текст', 'Текст'],
 ];
 
 let count = 1;
@@ -20,12 +20,23 @@ buttons.forEach((btn) => {
     })
 })
 
+function lockButton() {
+    const liricsCount = lyricsSongs.length;
+    buttons[0].disabled = count <= 1 ? true : false;
+    buttons[1].disabled = count >= liricsCount ? true : false;
+}
+
+lockButton();
+
 let counters = document.querySelector('.counter__info');
 counters.innerText = count + `/${lyricsSongs.length}`;
 
 function counter(btn) {
+    console.log(count);
+
 
     let i = Boolean(btn) ? ++count : --count;
+    lockButton();
     if (i < 1) count = 1;
     if (i > lyricsSongs.length) count = lyricsSongs.length;
     counters.innerText = count + `/${lyricsSongs.length}`;

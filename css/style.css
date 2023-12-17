@@ -3,9 +3,6 @@
 @font-face {
   font-family: 'NicoMoji';
   src: url('/font/NicoMoji-Regular.ttf') format('woff'),
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    url('/font/NicoMoji-Regular.ttf') format('truetype');
-  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 * {
@@ -98,6 +95,7 @@ main {
 i {
   font-size: 5rem;
   color: white;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #eaf8e8, 0 10px 3px #000;
 }
 
 .front p {
@@ -131,6 +129,7 @@ i {
   font-size: 3rem;
   top: 7rem;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #5dff44, 0 10px 3px #000;
+  z-index: 1;
 }
 
 .logo {
@@ -420,6 +419,10 @@ button {
   transition: all 0.5s;
 }
 
+.front:hover {
+  box-shadow: 0px 0px 20px 7px #22CDE3;
+}
+
 .back {
   font-size: 2.5rem;
   color: white;
@@ -453,6 +456,8 @@ input[type=checkbox] {
   }
 }
 
+
+/* CARD 1 */
 .one_front {
   border: 8px solid #f8b8e6;
   background: linear-gradient(180deg, #D89EC8 -20.61%, #f0cae6 64.04%);
@@ -464,6 +469,14 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #D89EC8;
 }
 
+.one_front:hover {
+  box-shadow: 0px 0px 20px 7px #fac1ea;
+}
+
+/* end */
+
+
+/* CARD 2 */
 .two_front {
   border: 8px solid #CCEF68;
   background: linear-gradient(180deg, #CCEF68 -20.61%, #e1f5aa 64.04%);
@@ -475,6 +488,13 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #CCEF68;
 }
 
+.two_front:hover {
+  box-shadow: 0px 0px 20px 7px #d0f272;
+}
+
+/* end */
+
+/* CARD 3 */
 .three_front {
   border: 8px solid #FE679D;
   background: linear-gradient(180deg, #FE679D -20.61%, #f496b8 64.04%);
@@ -486,6 +506,13 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #FE679D;
 }
 
+.three_front:hover {
+  box-shadow: 0px 0px 20px 7px #f4709f;
+}
+
+/* end */
+
+/* CARD 4 */
 .four_front {
   border: 8px solid #8E67FE;
   background: linear-gradient(180deg, #8E67FE -20.61%, #c2acff 64.04%);
@@ -497,6 +524,12 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #8E67FE;
 }
 
+.four_front:hover {
+  box-shadow: 0px 0px 20px 7px #9475f1;
+}
+/* end */
+
+/* CARD 5 */
 .five_front {
   border: 8px solid #FEB867;
   background: linear-gradient(180deg, #FEB867 -20.61%, #ffd7aa 64.04%);
@@ -508,7 +541,12 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #FEB867;
 }
 
+.five_front:hover {
+  box-shadow: 0px 0px 20px 7px #fabb73;
+}
+/* end */
 
+/* CARD 6 */
 .six_front {
   border: 8px solid #84EEA8;
   background: linear-gradient(180deg, #84EEA8 -20.61%, #c5ffd9 64.04%);
@@ -520,6 +558,12 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #84EEA8;
 }
 
+.six_front:hover {
+  box-shadow: 0px 0px 20px 7px #84EEA8;
+}
+/* end */
+
+/* CARD 7 */
 .seven_front {
   border: 8px solid #8180D0;
   background: linear-gradient(180deg, #8180D0 -20.61%, #babaf2 64.04%);
@@ -531,6 +575,12 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #8180D0;
 }
 
+.seven_front:hover {
+  box-shadow: 0px 0px 20px 7px #9c9bf0;
+}
+/* end */
+
+/* CARD 8 */
 .eight_front {
   border: 8px solid #97EAFC;
   background: linear-gradient(180deg, #97EAFC -20.61%, #d1f7ff 64.04%);
@@ -542,6 +592,12 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #97EAFC;
 }
 
+.eight_front:hover {
+  box-shadow: 0px 0px 20px 7px #99e5f6;
+}
+/* end */
+
+/* CARD 9 */
 .nine_front {
   border: 8px solid #DC97FC;
   background: linear-gradient(180deg, #DC97FC -20.61%, #eccafc 64.04%);
@@ -553,25 +609,13 @@ input[type=checkbox] {
   box-shadow: 0px 0px 15px 5px #DC97FC;
 }
 
-
-
-.x_front {
-  border: 8px solid #efa022;
-  background: linear-gradient(180deg, #e35222 -20.61%, #f1be8b 64.04%);
-  box-shadow: 0px 0px 15px 5px #eab30e;
-  text-shadow: none;
+.nine_front:hover {
+  box-shadow: 0px 0px 20px 7px #e0a6fa;
 }
+/* end */
 
-.x_back {
-  box-shadow: 0px 0px 15px 5px #eab30e;
-}
-
-
-
-
-.gr {
-  border: 8px solid #b5ef22;
-  background: linear-gradient(180deg, #9fe322 -20.61%, #adf18b 64.04%);
-  box-shadow: 0px 0px 15px 5px #50ea0e;
-  text-shadow: 5px 5px 5px #2ae336;
+button:disabled,
+button[disabled]{
+  color: #666666;
+  opacity: 0.2;
 }
