@@ -12,15 +12,18 @@
 </head>
 
 <body>
-    <img class="flash_line_top" src="/img/line-flash-top.png">
+    <img class="flash_line_top animate__animated animate__fadeIn" src="/img/line-flash-top.png">
     <header>
         <div class="logo"><b class="green">У<span>Б</span>К<span>І</span></b><b class="red">disco</b></div>
-        <div class="disco__ball"></div>
-        <div class="counter__info"></div>
+        <div class="disco__ball animate__animated"></div>
+        <div class="counter__info">
+          <div class="counter__current animate__animated"></div>
+          <span>/</span>
+          <div class="counter__total"></div>
+        </div>
     </header>
 
     <main>
-      
         <div class="container">
             <button><i class="uil uil-arrow-left"></i></button>
             <div class="card__container">
@@ -30,8 +33,19 @@
             <button><i class="uil uil-arrow-right"></i></button>
         </div>
 
-        <img class="flash_line_bottom" src="/img/line-flash-bottom.png">
+        <img class="flash_line_bottom animate__animated animate__fadeIn" src="/img/line-flash-bottom.png">
+
+        <div class="player animate__animated animate__backInUp">
+          <audio id="player" src="/music/Rick Astley - Never Gonna Give You Up.mp3"></audio>
+          <div class="button_player">
+            <i class="uil uil-play-circle"></i>
+          </div>
+          <!-- <button><i class="uil uil-pause-circle"></i></button> -->
+          <!-- <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button> -->
+        </div>
     </main>
+
+
 
     <div class="glowing">
 
@@ -49,7 +63,9 @@
         <span style="--i:2;"></span>
         <span style="--i:3;"></span>
     </div>
+    
 
     <script src="/js/script.js"></script>
 </body>
+
 </html>

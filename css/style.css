@@ -124,12 +124,18 @@ i {
 }
 
 .counter__info {
+  display: flex;
+  gap: .5rem;
   font-family: 'NicoMoji';
   right: 10rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   top: 7rem;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #5dff44, 0 10px 3px #000;
   z-index: 1;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -145,7 +151,7 @@ i {
 }
 
 b.green {
-  font: 400 4rem "Vibur";
+  font: 400 4rem "Roboto";
   color: #f1ffee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #44ff7c, 0 0 0.5em #44ff6d, 0 0 0.1em #5dff44, 0 10px 3px #000;
 }
@@ -397,6 +403,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 
   display: flex;
   width: 300px;
@@ -618,4 +625,32 @@ button:disabled,
 button[disabled]{
   color: #666666;
   opacity: 0.2;
+}
+
+.player {
+  bottom: 5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.button_player i{
+  text-shadow: inherit;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all linear .25s;
+}
+
+.button_player i:hover {
+  opacity: 1;
+  text-shadow: 0 -10px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #eaf8e8, 0 10px 3px #000;
+  transition: opacity .3s ease-in-out;
+}
+
+.active i{
+  opacity: 1;
+  text-shadow: 0 -10px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #eaf8e8, 0 10px 3px #000;
 }

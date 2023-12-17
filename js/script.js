@@ -28,22 +28,27 @@ function lockButton() {
 
 lockButton();
 
-let counters = document.querySelector('.counter__info');
-counters.innerText = count + `/${lyricsSongs.length}`;
+let counters = document.querySelector('.counter__current');
+let counterTotal = document.querySelector('.counter__total');
+counterTotal.innerText = `${lyricsSongs.length}`;
+
+counters.innerText = count;
 
 function counter(btn) {
-    console.log(count);
-
-
     let i = Boolean(btn) ? ++count : --count;
     lockButton();
     if (i < 1) count = 1;
     if (i > lyricsSongs.length) count = lyricsSongs.length;
-    counters.innerText = count + `/${lyricsSongs.length}`;
+    counters.innerText = count;
     animateSlider(Boolean(btn));
 }
 
+const discoBallElem = document.querySelector('.disco__ball');
+
 function animateSlider(btn) {
+    discoBallElem.classList.add('animate__swing');
+    counters.classList.add('animate__flipInX');
+
     let classAnimateOut = btn ? 
         'animate__backOutLeft' : 
         'animate__backOutRight';
@@ -57,11 +62,14 @@ function animateSlider(btn) {
 
     setTimeout(() => {
         b.remove();
+        discoBallElem.classList.remove('animate__swing');
+        counters.classList.remove('animate__flipInX');
+
         b = document.createElement('div');
         b.classList.add('card__data');
         cardsContainer.appendChild(b);
         renderCards(count, classAnimateIn);
-    }, 500)
+    }, 900)
 }
 
 const cardsContainer = document.querySelector('.card__container');
@@ -106,3 +114,25 @@ function renderCards(count = 0, classAnimate = 'animate__backInRight') {
 }
 
 renderCards();
+
+// PLAYER 
+
+const audioPlayer = document.getElementById('player');
+const buttonPlay = document.querySelector('.button_player');
+
+buttonPlay.addEventListener('click', (e) => {
+    let statusButton = e.target.className.includes('play');
+    let classButton = statusButton ? 'stop' : 'play';
+
+    if (!statusButton) {
+        audioPlayer.currentTime = 0;
+    }
+
+    classButton === 'play' ? audioPlayer.pause() : audioPlayer.play();
+    buttonPlay.children[0].classList.remove('uil-play-circle');
+    buttonPlay.children[0].classList.add(`uil-${classButton}-circle`);
+    buttonPlay.classList.toggle('active');
+
+});
+
+console.log(audioPlayer);
