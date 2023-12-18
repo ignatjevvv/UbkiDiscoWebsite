@@ -112,7 +112,9 @@ i {
   position: absolute;
   top: 0;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.9;
+  animation: fadeInDown;
+  animation-duration: 1s;
 }
 
 .flash_line_bottom {
@@ -121,6 +123,8 @@ i {
   bottom: 0;
   width: 100%;
   opacity: 1;
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
 }
 
 .counter__info {
@@ -637,20 +641,20 @@ button[disabled]{
   text-align: center;
 }
 
-.button_player i{
+#button_player{
   text-shadow: inherit;
   opacity: 0.2;
   cursor: pointer;
   transition: all linear .25s;
 }
 
-.button_player i:hover {
+#button_player:hover {
   opacity: 1;
   text-shadow: 0 -10px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #eaf8e8, 0 10px 3px #000;
   transition: opacity .3s ease-in-out;
 }
 
-.active i{
+i#button_player.uil.uil-stop-circle.active{
   opacity: 1;
   text-shadow: 0 -10px 100px, 0 0 2px, 0 0 1em #eeeeee, 0 0 0.5em #cbd1cd, 0 0 0.1em #eaf8e8, 0 10px 3px #000;
 }
